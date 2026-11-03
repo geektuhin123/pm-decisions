@@ -74,7 +74,7 @@ Around the tools, the plugin ships:
 ### System overview
 
 ```mermaid
-flowchart LR
+flowchart TB
     PM([PM])
 
     subgraph CC["Claude Code"]
