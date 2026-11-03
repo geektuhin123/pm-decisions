@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "pm-jev": {
+      "command": "python3",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/scripts/launch.py"],
+      "env": {
+        "TYPESAFE_API_KEY": "${user_config.typesafe_api_key}",
+        "PM_JEV_CONFIG": "${user_config.config_path}"
+      }
+    }
+  }
+}

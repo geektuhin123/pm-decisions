@@ -1,0 +1,7 @@
+[
+  {"id": "PROD-101", "title": "Scheduled report delivery", "summary": "Email a dashboard snapshot as PDF or PNG on a schedule"},
+  {"id": "PROD-102", "title": "Workspace-level guest access", "summary": "Invite external users with view-only rights scoped to one workspace"},
+  {"id": "PROD-103", "title": "Refresh failure alerts", "summary": "Notify owners when a scheduled data refresh fails"},
+  {"id": "PROD-104", "title": "Dashboard load performance", "summary": "Lazy-load visuals so large dashboards open faster"},
+  {"id": "PROD-105", "title": "Dark mode", "summary": "Dark theme for the web app"}
+]

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pm-decisions"
+version = "0.1.0"
+description = "Typed, fast PM decisions (triage, readiness, risk, priority, status, sharing checks) backed by TypeSafe's Jev model"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = ["typesafe-sdk>=0.7", "mcp>=1.10", "pyyaml>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+pm-jev = "pm_jev.cli:main"
+pm-jev-server = "pm_jev.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pm_jev = ["default_config.yaml"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

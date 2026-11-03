@@ -1,0 +1,31 @@
+# Example override for pm-decisions. Copy this file, edit it, and set its absolute
+# path in the plugin settings ("Config file") or in the PM_JEV_CONFIG environment
+# variable. Anything you leave out keeps the packaged default.
+
+# Stricter gates: act automatically only when Jev is very sure.
+gates:
+  auto: 0.90
+  review: 0.60
+
+# Replace the default product areas with your own. Write one clear sentence each.
+product_areas:
+  onboarding: "Signing up, first-run setup, invites and the getting-started checklist"
+  reporting: "Building, scheduling and exporting reports and dashboards"
+  integrations: "Connectors, webhooks, sync jobs and the public API"
+  billing: "Plans, seats, invoices, payments and refunds"
+  other: "Anything that does not clearly fit the areas above"
+
+risk_reviewers:
+  billing: "#billing-review"
+  security: "#security-review"
+  privacy: "#privacy-review"
+  compliance: "#compliance"
+  data_migration: "#data-platform"
+  breaking_change: "#api-owners"
+
+# Weight impact twice as heavily as reach.
+priority_weights:
+  reach: 1.0
+  impact: 2.0
+  confidence: 1.0
+  effort: 1.0

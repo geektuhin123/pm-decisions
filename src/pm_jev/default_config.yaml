@@ -1,0 +1,55 @@
+# Default configuration for pm-decisions.
+# Copy config/pm-decisions.example.yaml, edit it, and point PM_JEV_CONFIG at your copy
+# to override any of these values. Keys you leave out keep these defaults.
+
+# Confidence gates applied to every decision.
+#   confidence >= auto     -> act automatically
+#   confidence >= review   -> escalate to a stronger LLM (Claude) to double-check
+#   below review           -> a person decides
+gates:
+  auto: 0.80
+  review: 0.50
+
+# Strip emails, phone numbers, keys and similar before any text is sent to Jev.
+redact_before_send: true
+
+# Product areas used by feedback triage. Describe each one in a sentence: Jev reads
+# the descriptions, so clear descriptions matter more than clever names.
+product_areas:
+  dashboards: "Building, viewing or sharing dashboards, charts and reports"
+  data_connections: "Connecting data sources, refresh schedules, sync failures"
+  ai_assistant: "The natural-language assistant, its answers and suggestions"
+  admin_and_billing: "User management, permissions, plans, invoices and payments"
+  performance: "Slowness, timeouts, load times"
+  other: "Anything that does not clearly fit the areas above"
+
+# Who to notify when a risk flag fires.
+risk_reviewers:
+  billing: "Finance / billing owner"
+  security: "Security lead"
+  privacy: "Privacy / DPO"
+  compliance: "Compliance owner"
+  data_migration: "Data platform lead"
+  breaking_change: "API owner + developer relations"
+
+# RICE-style weights. Each factor is scored 0-3 by Jev, then combined in code:
+#   priority = (reach^w_reach * impact^w_impact * confidence^w_confidence) / effort^w_effort
+# Change a weight here instead of rewriting a prompt.
+priority_weights:
+  reach: 1.0
+  impact: 1.0
+  confidence: 1.0
+  effort: 1.0
+
+# Thresholds for the sharing check, per audience. A flag whose probability is at or
+# above the threshold blocks sharing; between review and block asks for a human look.
+sensitive_thresholds:
+  internal: {block: 0.95, review: 0.70}
+  customer: {block: 0.70, review: 0.40}
+  public:   {block: 0.50, review: 0.25}
+
+# Jev accepts at most 255 options in one Choice question.
+max_choice_options: 255
+
+# Meeting notes are labelled in batches of this many lines per call.
+meeting_batch_size: 40

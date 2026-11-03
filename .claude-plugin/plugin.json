@@ -1,0 +1,36 @@
+{
+  "name": "pm-decisions",
+  "displayName": "PM Decisions (Jev)",
+  "version": "0.1.0",
+  "description": "Fast, typed product-management decisions backed by TypeSafe's Jev: feedback triage, duplicate detection, story readiness, risk flags, priority scoring, status reading, meeting-note labelling, release-note classification, and a sensitive-content check before sharing. Claude writes; Jev decides.",
+  "author": {
+    "name": "geektuhin123",
+    "url": "https://github.com/geektuhin123"
+  },
+  "homepage": "https://github.com/geektuhin123/pm-decisions",
+  "repository": "https://github.com/geektuhin123/pm-decisions",
+  "license": "MIT",
+  "keywords": [
+    "product-management",
+    "triage",
+    "prioritization",
+    "jev",
+    "typesafe",
+    "decisions",
+    "mcp"
+  ],
+  "userConfig": {
+    "typesafe_api_key": {
+      "type": "string",
+      "title": "TypeSafe API key",
+      "description": "Key from console.typesafe.ai. Leave empty to run in offline mock mode (keyword heuristics, for demos only).",
+      "sensitive": true
+    },
+    "config_path": {
+      "type": "string",
+      "title": "Config file (optional)",
+      "description": "Absolute path to your own pm-decisions YAML config (product areas, gates, weights). Leave empty for defaults.",
+      "default": ""
+    }
+  }
+}

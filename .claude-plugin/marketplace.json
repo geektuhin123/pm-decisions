@@ -1,0 +1,15 @@
+{
+  "name": "pm-decisions",
+  "description": "Fast, typed product-management decisions for Claude Code, backed by TypeSafe's Jev model.",
+  "owner": {
+    "name": "geektuhin123",
+    "url": "https://github.com/geektuhin123"
+  },
+  "plugins": [
+    {
+      "name": "pm-decisions",
+      "source": "./",
+      "description": "Fast, typed PM decisions backed by TypeSafe's Jev. Claude writes; Jev decides."
+    }
+  ]
+}

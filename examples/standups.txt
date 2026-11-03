@@ -1,0 +1,5 @@
+Guest access API: endpoints merged, UI review tomorrow. On track for the 20th.
+
+Billing seat sync: still blocked waiting on the payments team to expose the seat count endpoint. Can someone escalate?
+
+Dashboard lazy loading: works for most visuals but maps are tricky. Might slip to next week, and design also asked for a loading skeleton, which is new scope.

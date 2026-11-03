@@ -1,0 +1,11 @@
+Our nightly data refresh has failed three nights in a row and the regional sales dashboard is showing last week's numbers. We present to leadership on Friday. Please treat this as urgent.
+
+Would love the ability to schedule a dashboard as a PDF email every Monday morning. Right now someone on my team does it by hand.
+
+How do I give a contractor view-only access to one workspace without them seeing the others?
+
+Honestly the AI assistant has been great this month. It answered a margin question in seconds that used to take our analyst an afternoon.
+
+Third invoice this quarter with the wrong seat count. If billing keeps being this messy we will look at alternatives at renewal.
+
+Dashboards with more than 20 visuals take almost a minute to load on Monday mornings.
